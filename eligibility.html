@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibility Test - Blood Bank Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BloodBank+</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="donors.html" class="nav-link">Donors</a></li>
+                <li><a href="acceptors.html" class="nav-link">Acceptors</a></li>
+                <li><a href="request.html" class="nav-link">Request Blood</a></li>
+                <li><a href="eligibility.html" class="nav-link active">Eligibility Test</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Our Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Blood Donation Eligibility Test</h1>
+            <p>Check if you're eligible to donate blood</p>
+        </div>
+    </section>
+
+    <!-- Eligibility Test -->
+    <section class="eligibility-section">
+        <div class="container">
+            <div class="eligibility-container">
+                <div class="test-info">
+                    <h2>Before You Start</h2>
+                    <p>This quick test will help determine if you're eligible to donate blood. Please answer all questions honestly.</p>
+                    <div class="info-points">
+                        <div class="info-point">
+                            <span class="point-icon">✓</span>
+                            <span>Takes less than 5 minutes</span>
+                        </div>
+                        <div class="info-point">
+                            <span class="point-icon">✓</span>
+                            <span>Completely confidential</span>
+                        </div>
+                        <div class="info-point">
+                            <span class="point-icon">✓</span>
+                            <span>Instant results</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="eligibilityForm" class="eligibility-form">
+                    <h2>Eligibility Questions</h2>
+                    
+                    <div class="form-group">
+                        <label for="testAge">What is your age?</label>
+                        <input type="number" id="testAge" min="1" max="100" required>
+                        <small>Must be between 18-65 years old</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="testWeight">What is your weight (in kg)?</label>
+                        <input type="number" id="testWeight" min="1" max="200" required>
+                        <small>Must be at least 50 kg</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Have you donated blood in the last 3 months?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="recentDonation" value="yes" required> Yes</label>
+                            <label><input type="radio" name="recentDonation" value="no" required> No</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Are you currently taking any medications?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="medications" value="yes" required> Yes</label>
+                            <label><input type="radio" name="medications" value="no" required> No</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Have you had any illness or fever in the past 2 weeks?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="recentIllness" value="yes" required> Yes</label>
+                            <label><input type="radio" name="recentIllness" value="no" required> No</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Do you have any chronic conditions (diabetes, heart disease, etc.)?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="chronicConditions" value="yes" required> Yes</label>
+                            <label><input type="radio" name="chronicConditions" value="no" required> No</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Have you traveled internationally in the past 6 months?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="travel" value="yes" required> Yes</label>
+                            <label><input type="radio" name="travel" value="no" required> No</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Do you smoke or use tobacco products?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="smoking" value="yes" required> Yes</label>
+                            <label><input type="radio" name="smoking" value="no" required> No</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Check Eligibility</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Modal -->
+    <div id="eligibilityResultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="eligibilityResult" class="result-content">
+                <!-- Result will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BloodBank+</h3>
+                    <p>Connecting donors with those in need, saving lives one donation at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="donors.html">Donor Registration</a></li>
+                        <li><a href="request.html">Blood Requests</a></li>
+                        <li><a href="eligibility.html">Eligibility Test</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blood Bank Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

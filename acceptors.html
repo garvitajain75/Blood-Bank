@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceptors - Blood Bank Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BloodBank+</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="donors.html" class="nav-link">Donors</a></li>
+                <li><a href="acceptors.html" class="nav-link active">Acceptors</a></li>
+                <li><a href="request.html" class="nav-link">Request Blood</a></li>
+                <li><a href="eligibility.html" class="nav-link">Eligibility Test</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Our Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Blood Acceptors</h1>
+            <p>Registered blood recipients and their requirements</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-controls">
+                <input type="text" id="acceptorSearch" placeholder="Search by name..." class="search-input">
+                <select id="acceptorBloodTypeFilter" class="filter-select">
+                    <option value="">All Blood Types</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <button onclick="addNewAcceptor()" class="btn btn-primary">Add New Acceptor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acceptors List -->
+    <section class="acceptors-section">
+        <div class="container">
+            <div id="acceptorsList" class="acceptors-grid">
+                <!-- Acceptors will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Acceptor Modal -->
+    <div id="addAcceptorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Acceptor</h2>
+            <form id="addAcceptorForm">
+                <div class="form-group">
+                    <label for="acceptorName">Full Name:</label>
+                    <input type="text" id="acceptorName" required>
+                </div>
+                <div class="form-group">
+                    <label for="acceptorAge">Age:</label>
+                    <input type="number" id="acceptorAge" min="1" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="acceptorBloodType">Blood Type Needed:</label>
+                    <select id="acceptorBloodType" required>
+                        <option value="">Select Blood Type</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="acceptorPhone">Phone:</label>
+                    <input type="tel" id="acceptorPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="acceptorEmail">Email:</label>
+                    <input type="email" id="acceptorEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="acceptorCondition">Medical Condition:</label>
+                    <textarea id="acceptorCondition" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="acceptorUrgency">Urgency Level:</label>
+                    <select id="acceptorUrgency" required>
+                        <option value="">Select Urgency</option>
+                        <option value="Critical">Critical</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Acceptor</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BloodBank+</h3>
+                    <p>Connecting donors with those in need, saving lives one donation at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="donors.html">Donor Registration</a></li>
+                        <li><a href="request.html">Blood Requests</a></li>
+                        <li><a href="eligibility.html">Eligibility Test</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blood Bank Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

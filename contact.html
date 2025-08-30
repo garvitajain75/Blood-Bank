@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Blood Bank Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BloodBank+</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="donors.html" class="nav-link">Donors</a></li>
+                <li><a href="acceptors.html" class="nav-link">Acceptors</a></li>
+                <li><a href="request.html" class="nav-link">Request Blood</a></li>
+                <li><a href="eligibility.html" class="nav-link">Eligibility Test</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Our Team</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our blood bank team</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>We're here to help you with any questions about blood donation, requests, or our services.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>302028 <br>kukus </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>Emergency: +91 9799833516<br>General: +91 9799833516</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>govindjangidt@gmail.com<br>gjgovindjangid@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 8:00 AM - 8:00 PM<br>Sat-Sun: 9:00 AM - 5:00 PM<br>Emergency: 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <h2>Send us a Message</h2>
+                        
+                        <div class="form-group">
+                            <label for="contactName">Full Name:</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email:</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">Phone:</label>
+                            <input type="tel" id="contactPhone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">Subject:</label>
+                            <select id="contactSubject" required>
+                                <option value="">Select Subject</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Donation Question">Donation Question</option>
+                                <option value="Blood Request">Blood Request</option>
+                                <option value="Technical Support">Technical Support</option>
+                                <option value="Partnership">Partnership</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message:</label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="contactSuccessModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="success-content">
+                <div class="success-icon">✅</div>
+                <h2>Message Sent Successfully!</h2>
+                <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                <button onclick="closeModal('contactSuccessModal')" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BloodBank+</h3>
+                    <p>Connecting donors with those in need, saving lives one donation at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="donors.html">Donor Registration</a></li>
+                        <li><a href="request.html">Blood Requests</a></li>
+                        <li><a href="eligibility.html">Eligibility Test</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blood Bank Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

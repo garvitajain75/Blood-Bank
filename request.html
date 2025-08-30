@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Request - Blood Bank Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BloodBank+</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="donors.html" class="nav-link">Donors</a></li>
+                <li><a href="acceptors.html" class="nav-link">Acceptors</a></li>
+                <li><a href="request.html" class="nav-link active">Request Blood</a></li>
+                <li><a href="eligibility.html" class="nav-link">Eligibility Test</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Our Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Request Blood</h1>
+            <p>Submit a blood request for urgent medical needs</p>
+        </div>
+    </section>
+
+    <!-- Request Form Section -->
+    <section class="request-section">
+        <div class="container">
+            <div class="request-container">
+                <div class="request-info">
+                    <h2>Emergency Blood Request</h2>
+                    <p>Fill out this form to request blood for medical emergencies. Our team will process your request immediately and connect you with available donors.</p>
+                    
+                    <div class="emergency-contact">
+                        <h3>Emergency Hotline</h3>
+                        <p class="hotline-number">📞 +1 (555) 911-BLOOD</p>
+                        <p>Available 24/7 for critical emergencies</p>
+                    </div>
+                    
+                    <div class="request-steps">
+                        <h3>How it works:</h3>
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span>Fill out the request form</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span>Our team verifies the request</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span>We match with available donors</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <span>Coordinate blood collection/delivery</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="bloodRequestForm" class="request-form">
+                    <h2>Blood Request Form</h2>
+                    
+                    <div class="form-section">
+                        <h3>Patient Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="patientName">Patient Full Name:</label>
+                            <input type="text" id="patientName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="patientAge">Patient Age:</label>
+                            <input type="number" id="patientAge" min="1" max="120" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="patientGender">Gender:</label>
+                            <select id="patientGender" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bloodTypeNeeded">Blood Type Needed:</label>
+                            <select id="bloodTypeNeeded" required>
+                                <option value="">Select Blood Type</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="unitsNeeded">Units Needed:</label>
+                            <input type="number" id="unitsNeeded" min="1" max="10" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Medical Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="hospitalName">Hospital/Clinic Name:</label>
+                            <input type="text" id="hospitalName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="doctorName">Doctor's Name:</label>
+                            <input type="text" id="doctorName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="medicalCondition">Medical Condition/Reason:</label>
+                            <textarea id="medicalCondition" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgencyLevel">Urgency Level:</label>
+                            <select id="urgencyLevel" required>
+                                <option value="">Select Urgency</option>
+                                <option value="Critical">Critical (Within 2 hours)</option>
+                                <option value="High">High (Within 6 hours)</option>
+                                <option value="Medium">Medium (Within 24 hours)</option>
+                                <option value="Low">Low (Within 48 hours)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="requiredDate">Required Date:</label>
+                            <input type="date" id="requiredDate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="contactName">Contact Person Name:</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">Contact Phone:</label>
+                            <input type="tel" id="contactPhone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Contact Email:</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hospitalAddress">Hospital Address:</label>
+                            <textarea id="hospitalAddress" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additionalNotes">Additional Notes:</label>
+                            <textarea id="additionalNotes" rows="3" placeholder="Any additional information that might be helpful..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="termsAccepted" required>
+                            I confirm that all information provided is accurate and I understand that false information may delay the blood request process.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Blood Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="requestSuccessModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="success-content">
+                <div class="success-icon">✅</div>
+                <h2>Blood Request Submitted Successfully!</h2>
+                <div id="requestSummary" class="request-summary">
+                    <!-- Request summary will be populated by JavaScript -->
+                </div>
+                <p>Our team will contact you within the next hour to coordinate the blood collection/delivery.</p>
+                <div class="next-steps">
+                    <h3>Next Steps:</h3>
+                    <ul>
+                        <li>Keep your phone available for our team's call</li>
+                        <li>Prepare necessary medical documents</li>
+                        <li>Coordinate with the hospital staff</li>
+                    </ul>
+                </div>
+                <button onclick="closeModal('requestSuccessModal')" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BloodBank+</h3>
+                    <p>Connecting donors with those in need, saving lives one donation at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="donors.html">Donor Registration</a></li>
+                        <li><a href="request.html">Blood Requests</a></li>
+                        <li><a href="eligibility.html">Eligibility Test</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blood Bank Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
