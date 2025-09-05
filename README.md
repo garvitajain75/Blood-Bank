@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ```markdown
 # Blood Bank Management System
 
@@ -34,3 +35,7 @@ Guidelines for contributing to the project.  Specify coding standards, testing p
 
 Information about the license under which this project is released.
 ```
+=======
+# Blood-Bank
+...
+>>>>>>> 895771b3f59aacaadbeb831fd72c621a06a68518
